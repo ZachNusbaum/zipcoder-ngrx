@@ -6,13 +6,14 @@ import {
   MetaReducer
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
+import * as zipcodeReducer from './zipcode.reducer';
 
 export interface State {
 
 }
 
 export const reducers: ActionReducerMap<State> = {
-
+  zipcode: zipcodeReducer.reducer
 };
 
 
