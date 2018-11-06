@@ -18,6 +18,7 @@ export class StatePreviewComponent implements OnInit {
 
   ngOnInit() {
     this.zipcode$.subscribe((data: any) => {
+      console.log('Loading data from store...', data);
       this.latitude = data.latitude;
     });
   }

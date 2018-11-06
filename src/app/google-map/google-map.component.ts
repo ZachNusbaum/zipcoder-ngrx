@@ -21,7 +21,7 @@ export class GoogleMapComponent implements OnInit {
 
   ngOnInit() {
     this.zipcode$.subscribe((response: any) => {
-      console.log('response is', response);
+      console.log('Loading data from store...', response);
       this.latitude = response.latitude;
       this.longitude = response.longitude;
     });

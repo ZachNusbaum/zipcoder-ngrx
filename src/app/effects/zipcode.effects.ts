@@ -20,7 +20,6 @@ export class ZipcodeEffects {
   geocode$ = this.actions$.pipe(
     ofType(ZipcodeActionTypes.InputZipcode),
     switchMap((result: any) => {
-      console.log('result', result.payload);
       return this.http.get(`https://zippopotam.us/us/${result.payload.zip}`).pipe(
         map((data: any) => {
             return {
