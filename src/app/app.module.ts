@@ -13,12 +13,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { ZipcodeEffects } from './effects/zipcode.effects';
 import { StatePreviewComponent } from './state-preview/state-preview.component';
 import { ZipcodeInputComponent } from './zipcode-input/zipcode-input.component';
+import { GoogleMapComponent } from './google-map/google-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StatePreviewComponent,
-    ZipcodeInputComponent
+    ZipcodeInputComponent,
+    GoogleMapComponent
   ],
   imports: [
     BrowserModule,
