@@ -40,3 +40,4 @@ Thumbs.db
 /src/environments/environment.prod.ts
 /src/environments/environment.ts
 /.firebase/hosting.ZGlzdC9TdG9yZURlbW8.cache
+.firebase/hosting.*.cache
