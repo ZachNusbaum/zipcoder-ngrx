@@ -2,7 +2,9 @@ import { Action } from '@ngrx/store';
 
 export enum ZipcodeActionTypes {
   LoadZipcodes = '[Zipcode] Load Zipcodes',
-  InputZipcode = '[Zipcode] Input Zipcode'
+  InputZipcode = '[Zipcode] Input Zipcode',
+  ZipGeocoded = '[Zipcode] Geocoded'
+
 }
 
 export class LoadZipcodes implements Action {
@@ -14,4 +16,9 @@ export class InputZipcode implements Action {
   constructor(public payload: {}) {}
 }
 
-export type ZipcodeActions = LoadZipcodes | InputZipcode;
+export class ZipGeocoded implements Action {
+  readonly type = ZipcodeActionTypes.ZipGeocoded;
+  constructor(public payload: {}) {}
+}
+
+export type ZipcodeActions = LoadZipcodes | InputZipcode | ZipGeocoded;

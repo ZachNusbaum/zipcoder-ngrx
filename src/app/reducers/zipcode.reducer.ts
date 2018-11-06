@@ -3,8 +3,8 @@ import { ZipcodeActions, ZipcodeActionTypes } from '../actions/zipcode.actions';
 
 export interface State {
   zip: string;
-  latitude: number;
-  longitude: number;
+  latitude: number | string;
+  longitude: number | string;
 }
 
 export const initialState: State = {
@@ -19,6 +19,8 @@ export function reducer(state = initialState, action: ZipcodeActions): State {
     case ZipcodeActionTypes.LoadZipcodes:
       return state;
     case ZipcodeActionTypes.InputZipcode:
+      return Object.assign({}, state, action.payload);
+    case ZipcodeActionTypes.ZipGeocoded:
       return Object.assign({}, state, action.payload);
 
 
