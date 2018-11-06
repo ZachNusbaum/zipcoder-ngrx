@@ -18,6 +18,8 @@ export function reducer(state = initialState, action: ZipcodeActions): State {
 
     case ZipcodeActionTypes.LoadZipcodes:
       return state;
+    case ZipcodeActionTypes.InputZipcode:
+      return Object.assign({}, state, action.payload);
 
 
     default:

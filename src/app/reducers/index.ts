@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 import * as zipcodeReducer from './zipcode.reducer';
 
 export interface State {
-
+  zipcode: zipcodeReducer.State;
 }
 
 export const reducers: ActionReducerMap<State> = {
