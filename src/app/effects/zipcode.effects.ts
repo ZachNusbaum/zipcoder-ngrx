@@ -3,6 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ZipcodeActionTypes } from '../actions/zipcode.actions';
 import { catchError, map, merge, mergeMap, switchMap } from 'rxjs/operators';
+import { of } from 'rxjs';
+
+export class EffectError implements Action {
+  readonly type = '[Zipcode] Zipcode Error';
+}
 
 @Injectable()
 export class ZipcodeEffects {
@@ -23,7 +28,9 @@ export class ZipcodeEffects {
                 city: data.places[0]['place name'], state: data.places[0]['state']}
             };
           }
-        )
+        ),
+
+        catchError( () => of( new EffectError() ) )
       );
     })
   );
