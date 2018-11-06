@@ -10,12 +10,16 @@ import * as reducer from '../reducers/index';
 })
 export class StatePreviewComponent implements OnInit {
   zipcode$: Observable<{}>;
+  latitude: string;
 
   constructor(private store: Store<reducer.State>) {
     this.zipcode$ = this.store.select('zipcode');
   }
 
   ngOnInit() {
+    this.zipcode$.subscribe((data: any) => {
+      this.latitude = data.latitude;
+    });
   }
 
 }

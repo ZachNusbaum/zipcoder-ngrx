@@ -1,3 +1,4 @@
-<p>
-  google-map works!
-</p>
+<div *ngIf = "latitude && longitude">
+  <img src="{{buildImageUrl()}}" alt=""> <br>
+  <a routerLink="/">View JSON</a>
+</div>

@@ -17,6 +17,9 @@ export const initialState: State = {
   state: null
 };
 
+export const getLatitude = (state: State) => state.latitude;
+export const getLongitude = (state: State) => state.longitude;
+
 export function reducer(state = initialState, action: ZipcodeActions): State {
   switch (action.type) {
 
