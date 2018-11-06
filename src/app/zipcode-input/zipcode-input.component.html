@@ -1,0 +1,12 @@
+<form (ngSubmit)="setZip(zip.value)">
+  <fieldset>
+    <legend>ZIP Code Lookup</legend>
+    <div>
+      <input type="number" maxlength="5" #zip>
+    </div>
+    
+    <div>
+      <input type="submit" value="Lookup">
+    </div>
+  </fieldset>
+</form>
