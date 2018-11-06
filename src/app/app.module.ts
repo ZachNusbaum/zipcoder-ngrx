@@ -10,10 +10,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { ZipcodeEffects } from './effects/zipcode.effects';
+import { StatePreviewComponent } from './state-preview/state-preview.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StatePreviewComponent
   ],
   imports: [
     BrowserModule,
