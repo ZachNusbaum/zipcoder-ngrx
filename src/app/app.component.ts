@@ -15,7 +15,8 @@ export class AppComponent {
   constructor(private store: Store<State>) {
     this.zipcode$ = this.store.select('zipcode');
   }
-  setZip() {
-    this.store.dispatch(new InputZipcode({zip: '12345'}));
+  setZip(zip) {
+    this.store.dispatch(new InputZipcode({zip: zip}));
+    return false;
   }
 }

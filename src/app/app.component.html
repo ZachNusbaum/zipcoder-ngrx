@@ -17,6 +17,8 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
-<button (click)="setZip()">Set Zip</button>
+<label for="zip">ZIP: </label>
+<input type="number" maxlength="5" #zip>
+<button (click)="setZip(zip.value)">Set Zip</button>
 {{zipcode$ | async | json}}
 <router-outlet></router-outlet>
