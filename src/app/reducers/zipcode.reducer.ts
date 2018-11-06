@@ -5,12 +5,16 @@ export interface State {
   zip: string;
   latitude: number | string;
   longitude: number | string;
+  city: string;
+  state: string;
 }
 
 export const initialState: State = {
   zip: null,
   latitude: null,
-  longitude: null
+  longitude: null,
+  city: null,
+  state: null
 };
 
 export function reducer(state = initialState, action: ZipcodeActions): State {

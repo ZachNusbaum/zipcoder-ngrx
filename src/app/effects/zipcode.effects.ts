@@ -19,7 +19,8 @@ export class ZipcodeEffects {
         map((data: any) => {
             return {
                 type: ZipcodeActionTypes.ZipGeocoded,
-                payload: {latitude:  data.places[0]['latitude'], longitude: data.places[0]['longitude']}
+                payload: {latitude:  data.places[0]['latitude'], longitude: data.places[0]['longitude'],
+                city: data.places[0]['place name'], state: data.places[0]['state']}
             };
           }
         )
